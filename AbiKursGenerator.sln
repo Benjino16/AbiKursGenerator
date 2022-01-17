@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AbiKursGenerator", "AbiKursGenerator\", "{89082B59-9CDF-45C1-88F6-1A5F3ECE4FF3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50166"
+		Debug.AspNetCompiler.PhysicalPath = "AbiKursGenerator\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50166\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50166"
+		Release.AspNetCompiler.PhysicalPath = "AbiKursGenerator\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50166\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50166"
+		SlnRelativePath = "AbiKursGenerator\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89082B59-9CDF-45C1-88F6-1A5F3ECE4FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89082B59-9CDF-45C1-88F6-1A5F3ECE4FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4739FE9-9051-4725-999F-D1389CDD1655}
+	EndGlobalSection
+EndGlobal
