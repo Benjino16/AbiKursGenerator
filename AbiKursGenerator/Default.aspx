@@ -102,13 +102,16 @@
         </asp:UpdatePanel>
         <br />
         <br />
-        <asp:Button ID="CheckRulesButton" runat="server" Height="38px" OnClick="CheckButtonClicked" Text="Kursauswahl Überprüfen" Width="213px" />
+        <asp:Button ID="CheckRulesButton" runat="server" Height="38px" OnClick="CheckButtonClicked" Text="Kursauswahl überprüfen" Width="213px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="SaveKursButton" runat="server" Height="38px" OnClick="SaveButtonClicked" Text="Kursauswahl Speichern" Width="213px" Visible="False" />
+        <asp:Button ID="SaveKursButton" runat="server" Height="38px" OnClick="SaveButtonClicked" Text="Kursauswahl speichern" Width="213px" Visible="False" />
         <br />
         <br />
         <br />
-               <asp:Panel ID="CheckListPanel" runat="server" Visible="False" Width="308px">
+        
+    <div class="row">
+        <div class="col-md-4">
+            <asp:Panel ID="CheckListPanel" runat="server" Visible="False" Width="308px">
                     <asp:Label ID="ResultHeader" runat="server" Font-Bold="True">Auswahl Check:</asp:Label>
                     <br />
                     <asp:Label ID="RuleText1" runat="server" Font-Bold="False"></asp:Label>
@@ -121,11 +124,35 @@
                     <br />
                     <asp:Label ID="RuleText5" runat="server" Font-Bold="False"></asp:Label>
                     <br />
+                    <br />
                     <asp:Label ID="ResultText" runat="server" Font-Bold="True"></asp:Label>
                 </asp:Panel>
-                <asp:Panel ID="SaveKursPanel" runat="server" Visible="False" Width="320px">
-                    <strong>Kursauswahl:<br /> <br /> </strong>
+        </div>
+        <div class="col-md-4">
+            <asp:Panel ID="SaveKursPanel" runat="server" Visible="False" Width="320px">
+                    <strong>Kursauswahl:&nbsp; </strong>
+                    (Kopieren: STRG + C)<strong><br />
+                    <br />
+                    Leistungskurs 1:&nbsp;&nbsp;
+                    <asp:Label ID="LK1_SaveText" runat="server"></asp:Label>
+                    <br />
+                    Leistungskurs 2:&nbsp;&nbsp;
+                    <asp:Label ID="LK2_SaveText" runat="server"></asp:Label>
+                    <br />
+                    s. Grundkurs&nbsp;&nbsp; 1:&nbsp;&nbsp;
+                    <asp:Label ID="SGK1_SaveText" runat="server"></asp:Label>
+                    <br />
+                    s. Grundkurs&nbsp;&nbsp; 2:&nbsp;&nbsp;
+                    <asp:Label ID="SGK2_SaveText" runat="server"></asp:Label>
+                    <br />
+                    m. Grundkurs&nbsp; 1:<br /> m. Grundkurs&nbsp; 2:<br /> Anrechnungs. 1:<br /> Anrechnungs. 2:<br />
+                    <br />
+                    <br />
+                    </strong>
                 </asp:Panel>
+        </div>
+    </div>
+               
         <br />
         <br />
         <div style="width: 1340px">
@@ -169,7 +196,11 @@
         <div class="col-md-4">
             <h2>Kursauswahl speichern</h2>
             <p>
-                Es ist momentan noch nicht möglich, die Kursauswahl zu speicher. Um diese jedoch nicht zu verlieren, kannst du ein Screenshot davon machen. (Windows: WIN + SHIFT + S)</p>
+                Es ist momentan noch nicht möglich, die Kursauswahl zu speicher. Um diese jedoch nicht zu verlieren, kannst du ein Screenshot davon machen.</p>
+            <p>
+                <strong>Windows:</strong> WIN + SHIFT + S)</p>
+            <p>
+                <strong>Mac:</strong> CMD + SHIFT + 4</p>
         </div>
     </div>
 </asp:Content>

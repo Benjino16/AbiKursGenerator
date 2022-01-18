@@ -35,7 +35,7 @@ public partial class _Default : Page
         if (KursGenerator.AllRulesTrue())
         {
             ResultText.ForeColor = System.Drawing.Color.Green;
-            SaveKursButton.Visible = true;
+            //SaveKursButton.Visible = true;
         }
         else
         {
