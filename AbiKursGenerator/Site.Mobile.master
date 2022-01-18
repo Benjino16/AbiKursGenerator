@@ -6,18 +6,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>ERROR</title>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Mobile Master Page</h1>
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <h1>Mobile is not supported :(</h1>
+        <%--asp:ContentPlaceHolder runat="server" ID="FeaturedContent" /--%>
         <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            <%--asp:ContentPlaceHolder runat="server" ID="MainContent" --%>
         </section>
-        <friendlyUrls:ViewSwitcher ID="ViewSwitcher1" runat="server" />
+        <%--friendlyUrls:ViewSwitcher ID="ViewSwitcher1" runat="server" /--%>
     </div>
     </form>
 </body>
