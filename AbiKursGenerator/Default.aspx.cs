@@ -68,6 +68,34 @@ public partial class _Default : Page
     {
         SaveKursPanel.Visible = true;
     }
+
+    protected void CalculatePointsFunction(object sender, EventArgs e)
+    {
+        if(NotenTextBox1.Visible)
+        {
+            //Calculate Note
+            NotenText.Text = NotenGenerator.CalculateSchriftlichePunkte(NotenTextBox1.Text, NotenTextBox2.Text, NotenTextBox3.Text, NotenTextBox4.Text, NotenTextBox5.Text, NotenTextBox6.Text, NotenTextBox7.Text, NotenTextBox8.Text);
+            NotenPanel.Visible = true;
+        }
+        else
+        {
+            ShowNoteButtons(true);
+        }
+        
+    }
+
+
+    void ShowNoteButtons(bool show)
+    {
+        NotenTextBox1.Visible = show;
+        NotenTextBox2.Visible = show;
+        NotenTextBox3.Visible = show;
+        NotenTextBox4.Visible = show;
+        NotenTextBox5.Visible = show;
+        NotenTextBox6.Visible = show;
+        NotenTextBox7.Visible = show;
+        NotenTextBox8.Visible = show;
+    }
 }
 
 
@@ -251,6 +279,64 @@ public static class KursGenerator
             return "✔";
         }
         return "✖";
+    }
+
+}
+
+
+public static class NotenGenerator
+{
+    /*
+    static int LK1;
+    static int LK2;
+    static int SGK1;
+    static int SGK2;
+    static int MGK1;
+    static int MGK2;
+    static int AN1;
+    static int AN2;
+
+    */
+    static int LKMultiplier = 13;
+    static int GKMultiplier = 9;
+    static int MGKMultiplier = 4;
+
+
+    static List<string> notesAsString = new List<string>() { "6", "5-", "5", "5+", "4-", "4", "4+", "3-", "3", "3+", "2-", "2", "2+", "1-", "1", "1+" };
+
+
+    static int NoteToInt(string note)
+    {
+        if(notesAsString.Any(r => r == note))
+        {
+            return notesAsString.FindIndex(r => r == note);
+        }
+        return 6;
+    }
+
+
+    static string PointsToNote(int points)
+    {
+        return notesAsString[(points / 60)];
+    }
+
+
+    public static string CalculateSchriftlichePunkte(string LK1, string LK2, string SGK1, string SGK2, string MGK1, string MGK2, string AN1, string AN2)
+    {
+        int schriftPunkte = (NoteToInt(LK1) * LKMultiplier) + (NoteToInt(LK2) * LKMultiplier) + (NoteToInt(SGK1) * GKMultiplier) + (NoteToInt(SGK2) * GKMultiplier);
+
+        int mündPunkte = (NoteToInt(MGK1) * MGKMultiplier) + (NoteToInt(MGK2) * MGKMultiplier) + (NoteToInt(AN1) * MGKMultiplier) + (NoteToInt(AN2) * MGKMultiplier);
+
+        int gesamtPunkte = mündPunkte + schriftPunkte;
+
+        if (schriftPunkte > 220 && mündPunkte > 80)
+        {
+            return "Du hättest das Abitur mit folgender Durchschnitsnote bestanden: " + PointsToNote(gesamtPunkte);
+        }
+        else
+        {
+            return "Du hättest dein Abitur mit folgender Note nicht bestanden: " + PointsToNote(gesamtPunkte);
+        }
     }
 
 }

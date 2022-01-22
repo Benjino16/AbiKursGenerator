@@ -54,7 +54,6 @@
                                 <asp:ListItem>Englisch</asp:ListItem>
                                 <asp:ListItem>Mathematik</asp:ListItem>
                                 <asp:ListItem>Chemie</asp:ListItem>
-                                <asp:ListItem>Biologie</asp:ListItem>
                                 <asp:ListItem>Politikwissenschaft</asp:ListItem>
                                 <asp:ListItem>Geographie</asp:ListItem>
                             </asp:DropDownList>
@@ -97,6 +96,40 @@
                             </asp:DropDownList>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox1" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox2" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox3" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox4" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox5" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox6" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox7" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                        <td>
+                            <br />
+                            <asp:TextBox ID="NotenTextBox8" runat="server" Height="22px" Visible="False" Width="120px"></asp:TextBox>
+                        </td>
+                    </tr>
                 </table>
             </ContentTemplate>
         </asp:UpdatePanel>
@@ -105,6 +138,8 @@
         <asp:Button ID="CheckRulesButton" runat="server" Height="38px" OnClick="CheckButtonClicked" Text="Kursauswahl überprüfen" Width="213px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="SaveKursButton" runat="server" Height="38px" OnClick="SaveButtonClicked" Text="Kursauswahl speichern" Width="213px" Visible="False" />
+        &nbsp;&nbsp;
+        <asp:Button ID="CalculatePoints" runat="server" Height="38px" OnClick="CalculatePointsFunction" Text="Note berechnen" Width="213px" />
         <br />
         <br />
         <br />
@@ -129,7 +164,7 @@
                 </asp:Panel>
         </div>
         <div class="col-md-4">
-            <asp:Panel ID="SaveKursPanel" runat="server" Visible="False" Width="320px">
+            <asp:Panel ID="SaveKursPanel" runat="server" Visible="False" Width="273px">
                     <strong>Kursauswahl:&nbsp; </strong>
                     (Kopieren: STRG + C)<strong><br />
                     <br />
@@ -145,11 +180,16 @@
                     s. Grundkurs&nbsp;&nbsp; 2:&nbsp;&nbsp;
                     <asp:Label ID="SGK2_SaveText" runat="server"></asp:Label>
                     <br />
-                    m. Grundkurs&nbsp; 1:<br /> m. Grundkurs&nbsp; 2:<br /> Anrechnungs. 1:<br /> Anrechnungs. 2:<br />
-                    <br />
-                    <br />
-                    </strong>
-                </asp:Panel>
+                    m. Grundkurs&nbsp; 1:<br /> m. Grundkurs&nbsp; 2:<br /> Anrechnungs. 1:<br /> Anrechnungs. 2:</strong></asp:Panel>
+        </div>
+        <div class="col-md-4">
+            <asp:Panel ID="NotenPanel" runat="server" Visible="False" Width="320px" Height="86px">
+                <span style="font-weight: bold; font-size: 13pt">Abitur Note</span><strong><span style="font-size: 13pt">:<br />
+                <br />
+                </span>
+                <asp:Label ID="NotenText" runat="server"></asp:Label>
+                </strong>
+            </asp:Panel>
         </div>
     </div>
                
